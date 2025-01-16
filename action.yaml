@@ -69,9 +69,9 @@ runs:
   using: composite
   steps:
     - name: Setting up GitHub Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
-        repository: Qualys/github-action-qwas
+        repository: NEFSC/ITD-DDB-QualysScan
         ref: main
         path: ./
         
@@ -131,7 +131,7 @@ runs:
       shell: bash
     
     - name: Uploading Qualys WAS Scan Result
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Qualys_WAS_Scan_Result
         path: ./outputs
